@@ -1,6 +1,5 @@
 def calPoints(operations):
     stack = []
-
     for op in operations:
         if op == "+":
             stack.append(stack[-1] + stack[-2])
@@ -10,11 +9,7 @@ def calPoints(operations):
             stack.pop()
         else:
             stack.append(int(op))
-
     return sum(stack)
 
-
-
 ops = input().split()
-result = calPoints(ops)
-print(result)
+print(calPoints(ops))
